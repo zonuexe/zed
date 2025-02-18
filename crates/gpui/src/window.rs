@@ -3233,8 +3233,7 @@ impl Window {
             keystroke,
             &dispatch_path,
         );
-        // Hide cursor when start typing
-        cx.platform.set_cursor_style(CursorStyle::None);
+
         if !match_result.to_replay.is_empty() {
             self.replay_pending_input(match_result.to_replay, cx)
         }
